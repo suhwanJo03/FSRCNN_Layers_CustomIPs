@@ -1,0 +1,295 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD60A9A08307DA12A",
+      "device": "xczu9eg-ffvb1156-2-e",
+      "gen_directory": "../../../../Shrinking_Layer.gen/sources_1/bd/Shrinking_Layer_Test",
+      "name": "Shrinking_Layer_Test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fifo_generator_0": "",
+      "Shrinking_Layer_0": ""
+    },
+    "interface_ports": {
+      "S_AXIS": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Shrinking_Layer_Test_axi_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "16"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "4"
+          }
+        },
+        "port_maps": {
+          "TDATA": {
+            "physical_name": "S_AXIS_tdata",
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "TREADY": {
+            "physical_name": "S_AXIS_tready",
+            "direction": "O"
+          },
+          "TUSER": {
+            "physical_name": "S_AXIS_tuser",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "TVALID": {
+            "physical_name": "S_AXIS_tvalid",
+            "direction": "I"
+          }
+        }
+      },
+      "m_axis": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Shrinking_Layer_Test_axi_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "12",
+            "value_src": "auto_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          }
+        },
+        "port_maps": {
+          "TDATA": {
+            "physical_name": "m_axis_tdata",
+            "direction": "O",
+            "left": "95",
+            "right": "0"
+          },
+          "TVALID": {
+            "physical_name": "m_axis_tvalid",
+            "direction": "O"
+          },
+          "TREADY": {
+            "physical_name": "m_axis_tready",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "axi_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "S_AXIS:m_axis"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "axi_reset_n",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "Shrinking_Layer_Test_axi_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "300000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "axi_reset_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "EOL": {
+        "direction": "O"
+      },
+      "EOF": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "Shrinking_Layer_Test_fifo_generator_0_0",
+        "xci_path": "ip\\Shrinking_Layer_Test_fifo_generator_0_0\\Shrinking_Layer_Test_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "FIFO_Implementation_axis": {
+            "value": "Common_Clock_Block_RAM"
+          },
+          "INTERFACE_TYPE": {
+            "value": "AXI_STREAM"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "16"
+          },
+          "Use_Embedded_Registers_axis": {
+            "value": "false"
+          }
+        }
+      },
+      "Shrinking_Layer_0": {
+        "vlnv": "xilinx.com:user:Shrinking_Layer:1.0",
+        "xci_name": "Shrinking_Layer_Test_Shrinking_Layer_0_1",
+        "xci_path": "ip\\Shrinking_Layer_Test_Shrinking_Layer_0_1\\Shrinking_Layer_Test_Shrinking_Layer_0_1.xci",
+        "inst_hier_path": "Shrinking_Layer_0"
+      }
+    },
+    "interface_nets": {
+      "S_AXIS_1": {
+        "interface_ports": [
+          "fifo_generator_0/S_AXIS",
+          "S_AXIS"
+        ]
+      },
+      "Shrinking_Layer_0_m_axis": {
+        "interface_ports": [
+          "Shrinking_Layer_0/m_axis",
+          "m_axis"
+        ]
+      },
+      "fifo_generator_0_M_AXIS": {
+        "interface_ports": [
+          "Shrinking_Layer_0/s_axis",
+          "fifo_generator_0/M_AXIS"
+        ]
+      }
+    },
+    "nets": {
+      "Shrinking_Layer_0_EOF": {
+        "ports": [
+          "Shrinking_Layer_0/EOF",
+          "EOF"
+        ]
+      },
+      "Shrinking_Layer_0_EOL": {
+        "ports": [
+          "Shrinking_Layer_0/EOL",
+          "EOL"
+        ]
+      },
+      "axi_clk_1": {
+        "ports": [
+          "axi_clk",
+          "fifo_generator_0/s_aclk",
+          "Shrinking_Layer_0/axi_clk"
+        ]
+      },
+      "axi_reset_n_1": {
+        "ports": [
+          "axi_reset_n",
+          "fifo_generator_0/s_aresetn",
+          "Shrinking_Layer_0/axi_reset_n"
+        ]
+      }
+    }
+  }
+}
