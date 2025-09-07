@@ -1,0 +1,21 @@
+# Vitis / SDK
+**/DDR_workspace/
+**/.metadata/
+**/bsp/
+**/Debug/
+**/Release/
+**/.sdk/
+**/.Xil/
+
+# Vivado
+**/.Xil/
+**/*.runs/
+**/*.cache/
+**/*.hw/
+**/*.ip_user_files/
+**/*.sim/
+**/*.jou
+**/*.log
+**/*.str
+**/*.ltx
+**/*.tmp/
