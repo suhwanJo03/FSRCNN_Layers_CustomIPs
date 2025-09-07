@@ -85,7 +85,6 @@ When the custom IP requires **weight data files**:
 ## 5. Block Design Overview
 
 Below is the Block Design structure where the **AXIS FIFO** is inserted in front of the custom IP to ensure valid AXIS input signals.  
-Capture the Vivado BD and insert the image here:
 
 ![Block Design Diagram](docs/bd_overview.png)
 
