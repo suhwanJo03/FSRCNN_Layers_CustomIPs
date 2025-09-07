@@ -9,7 +9,7 @@
 AXIS_CustomIP_OnBoard_Verification/
 │── AXIS_CustomIP_DDR_Test/ #the project folder that includes the block design
 │── DDR_workspace/ #Vitis firmware source folder: contains `frame1.h`, `frame2.h`, `main.c`
-│── *.xsa/ #platform files
+│── platform_files/ #*.xsa
 └── AXIS_CustomIP_DDR_Test_BlockDesign.pdf/
 ```
 
