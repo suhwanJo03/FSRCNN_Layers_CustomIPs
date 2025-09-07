@@ -10,6 +10,8 @@ AXIS_CustomIP_OnBoard_Verification/
 │── AXIS_CustomIP_DDR_Test/ #the project folder that includes the block design
 │── DDR_workspace/ #Vitis firmware source folder: contains `frame1.h`, `frame2.h`, `main.c`
 │── platform_files/ #*.xsa
+│── colab/ #Python script to generate frame1.h
+│── dataset/ #For Vitis header file generation and UART log comparison
 └── AXIS_CustomIP_DDR_Test_BlockDesign.pdf/
 ```
 
@@ -61,9 +63,11 @@ This guide covers **block design setup (with HP port configuration and clocking)
 - **S2MM**: Stores IP output stream into DDR (`rx_buffer`)  
 
 ### Source Files
-- **Input headers**: `src/frame1.h`, `src/frame2.h`  
-- **Main firmware**: `src/main.c`  
-- **Python script (auto-generate frame1.h)**: `scripts/gen_frame1_header.py` 
+- **Input headers**: `DDR_workspace/frame1.h`, `DDR_workspace/frame2.h`  
+- **Main firmware**: `DDR_workspace/main.c`  
+- **Python script (auto-generate frame1.h)**: `colab/txt_2_vitis_header.ipynb`  
+  → Executed in Google Colab to convert the provided dataset (`.txt` format) into `frame1.h`  
+  → Output is aligned C header arrays for Vitis DMA testing
 
 
 > Example uses **polling mode (Simple Mode)** without interrupts (can be extended if needed).
