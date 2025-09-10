@@ -13,6 +13,20 @@ Target platform: **AMD Xilinx ZCU102 (UltraScale+ MPSoC)**, Vivado 2023.1.
 
 ---
 
+## 📂 Repository Structure
+```
+AXIS_FSRCNN_Layers_CustomIPs/
+│── reference_code/                    # FSRCNN reference C code (Light-weighted, Quantized)
+│── AXIS_Y_Converter/                  # Custom IP core for Y-channel extraction (XBGR8888 → Y), incl. RTL & packaged IP
+│── AXIS_Shrinking_Layer/              # Shrinking Layer IP core (16ch → 12ch), with RTL sources and packaged IP
+│── AXIS_Expanding_Layer/              # Expanding Layer IP core (12ch → 16ch), with RTL sources, testbenches, and simulation setup
+│── AXIS_FIFO_CustomIP_Func_Verification/ # Functional verification resources (block diagrams, design notes, behavioral test files)
+│── AXIS_CustomIP_OnBoard_Verification/   # On-board validation resources (ILA captures, UART logs, synthesis/implementation reports)
+└── AXIS_IPs_v19.1_for_Integration.zip    # Pre-packaged IP bundle for users running Vivado versions earlier than 23.1
+```
+
+---
+
 ## 🛠️ IP Descriptions
 ### 🔹 Y Converter
 - **Input**: 32-bit AXI4-Stream (XBGR8888: padding + Blue + Green + Red)  
@@ -32,11 +46,57 @@ Target platform: **AMD Xilinx ZCU102 (UltraScale+ MPSoC)**, Vivado 2023.1.
 
 ---
 
+## 🖼️ Architecture
+
+### 1) Shrinking Layer — Top-Level Block Diagram
+![Shrinking Layer Block](docs/shrinking_layer_block.png)
+
+**Key Points**
+- Output channel-wise parallelism is adopted  
+  → Enables the next layer to receive concatenated input channels in one clock cycle when performing 1-size kernel convolution.  
+- Input data from the master is consistently formatted as `{ch16, ch15, … , ch1}`.  
+  → An unpacking stage distributes the data to 12 parallel convolution modules.  
+- An AXI4-Stream FIFO is used as a back buffer.  
+  → Overflow is prevented by monitoring the FIFO **TREADY** and **almost_full** signals to control the Shrinking Layer’s master ready signal.  
+- The convolution modules follow a **weight-stationary architecture**: weights are preloaded and fixed in on-chip registers/ROM (Weight_RF), while activations are streamed through, minimizing external memory bandwidth.  
+
+---
+
+### 2) Output Channel-wise Convolution — Detailed Block
+![Output Conv Block](docs/output_conv_block.png)
+
+**Key Points**
+- Convolution multiplications use DSP-based multipliers.  
+- Quantization avoids DSP usage by applying a **2-stage pipelined multiplier** (non-DSP)  
+  → Conserves DSP resources and meets 300 MHz clock timing (slack management).  
+- The block diagram illustrates computation for **one output channel**.  
+  → In the Shrinking Layer, 16 input channels are compressed into 12 output channels, so this block is instantiated **12 times in parallel**.  
+- Each convolution block is based on a **weight-stationary dataflow**:  
+  - The weights for each output channel are held constant in local registers.  
+  - Only the input feature maps are streamed in, reducing data movement and ensuring efficient reuse of weights.  
+
+---
+
+### 3) Expanding Layer
+- Architecturally identical to the Shrinking Layer, except for reversed channel dimensions.  
+  - **Input**: 12 channels → **Output**: 16 channels  
+- Maintains output channel-wise parallelism, AXI4-Stream FIFO backpressure control, and **weight-stationary convolution structure**.  
+
+---
+
 ## 🧪 Verification
 - **Testbenches (TB)**: Deterministic input/output verification for each IP  
 - **Functional Simulation**: Conducted in Vivado simulator for correctness check  
 - **UART Logging**: Captured runtime outputs for validation  
 - **ILA Probing**: On-board validation of timing, handshake, and data integrity  
+
+---
+
+✅ Additional Verification
+SystemVerilog-based verification has also been completed in collaboration with a teammate.  
+For details, please refer to the following repository:  
+**신광선(Gwangsun Shin, youngyang00)**
+👉 [Teammate’s GitHub Repository](https://github.com/youngyang00/SystemVerilog-AXI4S-ImageVerify)
 
 ---
 
@@ -105,14 +165,3 @@ Target platform: **AMD Xilinx ZCU102 (UltraScale+ MPSoC)**, Vivado 2023.1.
 
 ---
 
-## 📂 Repository Structure
-```
-AXIS_FSRCNN_Layers_CustomIPs/
-│── src/ # Verilog HDL sources
-│── ip_repo/ # Packaged IP cores
-│── sim/ # Testbenches & simulation files
-│── docs/ # Block diagrams & design notes
-└── results/ # ILA captures, UART logs, synthesis reports
-```
-
----
