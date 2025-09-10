@@ -63,7 +63,7 @@ AXIS_FSRCNN_Layers_CustomIPs/
 ---
 
 ### 2) Output Channel-wise Convolution — Detailed Block
-![Output Conv Block](docs/output_conv_block.png)
+![Output Conv Block](docs/output_conv.png)
 
 **Key Points**
 - Convolution multiplications use DSP-based multipliers.  
