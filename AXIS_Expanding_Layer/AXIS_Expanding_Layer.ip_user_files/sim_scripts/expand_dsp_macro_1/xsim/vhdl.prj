@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../Expanding_Layer_19.1.gen/sources_1/ip/expand_dsp_macro_1/sim/expand_dsp_macro_1.vhd" \
+
+# Do not sort compile order
+nosort

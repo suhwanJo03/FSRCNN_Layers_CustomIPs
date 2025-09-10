@@ -1,0 +1,278 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date             : Mon Sep  8 21:41:10 2025
+| Host             : DESKTOP-INFKKCG running 64-bit major release  (build 9200)
+| Command          : report_power -file Expanding_Layer_power_routed.rpt -pb Expanding_Layer_power_summary_routed.pb -rpx Expanding_Layer_power_routed.rpx
+| Design           : Expanding_Layer
+| Device           : xczu9eg-ffvb1156-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.055        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.432        |
+| Device Static (W)        | 0.623        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 99.0         |
+| Junction Temperature (C) | 26.0         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.028 |        3 |       --- |             --- |
+| CLB Logic               |     0.075 |    10438 |       --- |             --- |
+|   LUT as Logic          |     0.068 |     3884 |    274080 |            1.42 |
+|   CARRY8                |     0.006 |      502 |     34260 |            1.47 |
+|   Register              |     0.001 |     2844 |    548160 |            0.52 |
+|   LUT as Shift Register |    <0.001 |        1 |    144000 |           <0.01 |
+|   Others                |     0.000 |     1184 |       --- |             --- |
+| Signals                 |     0.069 |     9284 |       --- |             --- |
+| Block RAM               |     0.008 |        4 |       912 |            0.44 |
+| DSPs                    |     0.125 |      192 |      2520 |            7.62 |
+| I/O                     |     0.128 |      232 |       328 |           70.73 |
+| Static Power            |     0.623 |          |           |                 |
+| Total                   |     1.055 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint          |       0.850 |     0.540 |       0.358 |      0.182 |       NA    | Unspecified | NA         |
+| Vccint_io       |       0.850 |     0.041 |       0.005 |      0.035 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.194 |       0.000 |      0.194 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.064 |       0.031 |      0.033 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.037 |       0.037 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| MGTAVcc         |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt         |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------+---------+-----------------+
+| Clock   | Domain  | Constraint (ns) |
++---------+---------+-----------------+
+| axi_clk | axi_clk |             3.3 |
++---------+---------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------------+-----------+
+| Name                                                 | Power (W) |
++------------------------------------------------------+-----------+
+| Expanding_Layer                                      |     0.432 |
+|   Convolution_inst                                   |     0.259 |
+|     parallel_kernel_number[0].Adder_Tree_inst        |     0.005 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[0].PE_Array_inst          |     0.009 |
+|     parallel_kernel_number[10].Adder_Tree_inst       |     0.007 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[10].PE_Array_inst         |     0.010 |
+|     parallel_kernel_number[11].Adder_Tree_inst       |     0.006 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[11].PE_Array_inst         |     0.010 |
+|     parallel_kernel_number[12].Adder_Tree_inst       |     0.007 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[12].PE_Array_inst         |     0.010 |
+|       parallel_kernel_channel[1].Multiplier_DSP_inst |     0.001 |
+|     parallel_kernel_number[13].Adder_Tree_inst       |     0.006 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[13].PE_Array_inst         |     0.010 |
+|     parallel_kernel_number[14].Adder_Tree_inst       |     0.006 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[14].PE_Array_inst         |     0.009 |
+|     parallel_kernel_number[15].Adder_Tree_inst       |     0.007 |
+|       fisrt_part[0].Adder_inst_0                     |     0.002 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[15].PE_Array_inst         |     0.010 |
+|     parallel_kernel_number[1].Adder_Tree_inst        |     0.006 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[1].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[2].Adder_Tree_inst        |     0.007 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[2].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[3].Adder_Tree_inst        |     0.006 |
+|       fisrt_part[1].Adder_inst_0                     |     0.002 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[3].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[4].Adder_Tree_inst        |     0.007 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[4].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[5].Adder_Tree_inst        |     0.007 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.002 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[5].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[6].Adder_Tree_inst        |     0.006 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[6].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[7].Adder_Tree_inst        |     0.007 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.002 |
+|     parallel_kernel_number[7].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[8].Adder_Tree_inst        |     0.006 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[8].PE_Array_inst          |     0.010 |
+|     parallel_kernel_number[9].Adder_Tree_inst        |     0.006 |
+|       fisrt_part[0].Adder_inst_0                     |     0.001 |
+|       fisrt_part[1].Adder_inst_0                     |     0.001 |
+|       fisrt_part[2].Adder_inst_0                     |     0.001 |
+|       fisrt_part[3].Adder_inst_0                     |     0.001 |
+|     parallel_kernel_number[9].PE_Array_inst          |     0.010 |
+|       parallel_kernel_channel[0].Multiplier_DSP_inst |     0.001 |
+|   out_buffer                                         |     0.013 |
+|     U0                                               |     0.013 |
+|       inst_fifo_gen                                  |     0.013 |
+|   quant_scale_multiplication[0].Quantization         |     0.001 |
+|   quant_scale_multiplication[10].Quantization        |     0.001 |
+|   quant_scale_multiplication[11].Quantization        |     0.001 |
+|   quant_scale_multiplication[12].Quantization        |     0.001 |
+|   quant_scale_multiplication[13].Quantization        |     0.001 |
+|   quant_scale_multiplication[14].Quantization        |     0.001 |
+|   quant_scale_multiplication[15].Quantization        |     0.001 |
+|   quant_scale_multiplication[1].Quantization         |     0.001 |
+|   quant_scale_multiplication[2].Quantization         |     0.001 |
+|   quant_scale_multiplication[3].Quantization         |     0.001 |
+|   quant_scale_multiplication[4].Quantization         |     0.001 |
+|   quant_scale_multiplication[5].Quantization         |     0.001 |
+|   quant_scale_multiplication[6].Quantization         |     0.001 |
+|   quant_scale_multiplication[7].Quantization         |     0.001 |
+|   quant_scale_multiplication[8].Quantization         |     0.001 |
+|   quant_scale_multiplication[9].Quantization         |     0.001 |
++------------------------------------------------------+-----------+
+
+

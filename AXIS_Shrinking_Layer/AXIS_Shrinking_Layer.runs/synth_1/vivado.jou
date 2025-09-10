@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Sep  8 14:42:03 2025
+# Process ID: 16140
+# Current directory: D:/Github_Portfolio/Shrinking_Layer_19.1/Shrinking_Layer_19.1.runs/synth_1
+# Command line: vivado.exe -log Shrinking_Layer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Shrinking_Layer.tcl
+# Log file: D:/Github_Portfolio/Shrinking_Layer_19.1/Shrinking_Layer_19.1.runs/synth_1/Shrinking_Layer.vds
+# Journal file: D:/Github_Portfolio/Shrinking_Layer_19.1/Shrinking_Layer_19.1.runs/synth_1\vivado.jou
+# Running On: DESKTOP-INFKKCG, OS: Windows, CPU Frequency: 1498 MHz, CPU Physical cores: 4, Host memory: 16930 MB
+#-----------------------------------------------------------
+source Shrinking_Layer.tcl -notrace

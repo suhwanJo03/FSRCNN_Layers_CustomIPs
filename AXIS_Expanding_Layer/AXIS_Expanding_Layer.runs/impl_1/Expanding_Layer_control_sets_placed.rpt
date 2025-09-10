@@ -1,0 +1,127 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Mon Sep  8 21:39:58 2025
+| Host         : DESKTOP-INFKKCG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Expanding_Layer_control_sets_placed.rpt
+| Design       : Expanding_Layer
+| Device       : xczu9eg
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    49 |
+|    Minimum number of control sets                        |    43 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     6 |
+| Unused register locations in slices containing registers |    72 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    49 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    47 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              83 |           49 |
+| Yes          | No                    | No                     |             128 |           39 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            2617 |          394 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                                                        Enable Signal                                                        |                                                           Set/Reset Signal                                                          | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  axi_clk_IBUF_BUFG | heightCounter[7]_i_1_n_0                                                                                                    | axi_reset_n_IBUF_inst/O                                                                                                             |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG | widthCounter0                                                                                                               | axi_reset_n_IBUF_inst/O                                                                                                             |                2 |              9 |         4.50 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             |                                                                                                                                     |                3 |             17 |         5.67 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]                          | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]_0 |                4 |             20 |         5.00 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/ram_empty_fb_i_reg[0] | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]_0 |                4 |             20 |         5.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[15].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[4].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[10].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[11].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[2].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[1].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[13].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[14].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[0].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[8].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[7].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[6].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[3].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[5].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[12].Adder_Tree_inst/second_part[0].Adder_inst_1/E[0]                                | axi_reset_n_IBUF_inst/O                                                                                                             |                3 |             22 |         7.33 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]_0 |                8 |             26 |         3.25 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[8].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[7].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[5].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[4].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[3].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[0].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[2].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[12].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[13].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[11].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[14].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[15].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[1].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[10].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                 | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[6].Adder_Tree_inst/fisrt_part[0].Adder_inst_0/E[0]                                  | axi_reset_n_IBUF_inst/O                                                                                                             |                6 |             42 |         7.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                                             | axi_reset_n_IBUF_inst/O                                                                                                             |               43 |             57 |         1.33 |
+|  axi_clk_IBUF_BUFG | quant_scale_multiplication[9].Quantization/valid_1_reg_0[0]                                                                 | axi_reset_n_IBUF_inst/O                                                                                                             |               34 |            128 |         3.76 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/E[0]                  |                                                                                                                                     |               39 |            128 |         3.28 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/E[0]                                                                                                       | axi_reset_n_IBUF_inst/O                                                                                                             |               16 |            128 |         8.00 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].PE_Array_inst/parallel_kernel_channel[0].Multiplier_DSP_inst/E[0]_repN_2         | axi_reset_n_IBUF_inst/O                                                                                                             |               21 |            140 |         6.67 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].PE_Array_inst/parallel_kernel_channel[0].Multiplier_DSP_inst/E[0]_repN_4         | axi_reset_n_IBUF_inst/O                                                                                                             |               21 |            140 |         6.67 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].PE_Array_inst/parallel_kernel_channel[0].Multiplier_DSP_inst/E[0]                | axi_reset_n_IBUF_inst/O                                                                                                             |               24 |            160 |         6.67 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].PE_Array_inst/parallel_kernel_channel[0].Multiplier_DSP_inst/E[0]_repN_1         | axi_reset_n_IBUF_inst/O                                                                                                             |               27 |            180 |         6.67 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].PE_Array_inst/parallel_kernel_channel[0].Multiplier_DSP_inst/E[0]_repN_3         | axi_reset_n_IBUF_inst/O                                                                                                             |               30 |            200 |         6.67 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].PE_Array_inst/parallel_kernel_channel[0].Multiplier_DSP_inst/E[0]_repN           | axi_reset_n_IBUF_inst/O                                                                                                             |               33 |            220 |         6.67 |
+|  axi_clk_IBUF_BUFG | Convolution_inst/parallel_kernel_number[9].PE_Array_inst/parallel_kernel_channel[0].Multiplier_DSP_inst/E[0]_repN_5         | axi_reset_n_IBUF_inst/O                                                                                                             |               36 |            240 |         6.67 |
++--------------------+-----------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1757334510">
+  <File Type="ROUTE-PWR" Name="Expanding_Layer_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Expanding_Layer.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="Expanding_Layer_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Expanding_Layer_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="Expanding_Layer.msk"/>
+  <File Type="ROUTE-CLK" Name="Expanding_Layer_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="Expanding_Layer.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Expanding_Layer_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Expanding_Layer.bit"/>
+  <File Type="BG-DRC" Name="Expanding_Layer.drc"/>
+  <File Type="BG-BGN" Name="Expanding_Layer.bgn"/>
+  <File Type="BG-BIN" Name="Expanding_Layer.bin"/>
+  <File Type="BITSTR-RBT" Name="Expanding_Layer.rbt"/>
+  <File Type="BITSTR-NKY" Name="Expanding_Layer.nky"/>
+  <File Type="BITSTR-BMM" Name="Expanding_Layer_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Expanding_Layer.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Expanding_Layer_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="Expanding_Layer.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Expanding_Layer.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="Expanding_Layer_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Expanding_Layer.hwdef"/>
+  <File Type="PLACE-IO" Name="Expanding_Layer_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Expanding_Layer_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Expanding_Layer_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Expanding_Layer_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Expanding_Layer_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="Expanding_Layer_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Expanding_Layer_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Expanding_Layer_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Expanding_Layer_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Expanding_Layer_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="Expanding_Layer_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Expanding_Layer_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Expanding_Layer_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Expanding_Layer_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Expanding_Layer_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Expanding_Layer_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Expanding_Layer_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Expanding_Layer_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Expanding_Layer_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Expanding_Layer_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="Expanding_Layer_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="Expanding_Layer_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="Expanding_Layer_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Expanding_Layer_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="Expanding_Layer_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Expanding_Layer_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Expanding_Layer_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Expanding_Layer_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Expanding_Layer_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Expanding_Layer_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Expanding_Layer_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Expanding_Layer_bus_skew_postroute_physopted.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Expanding_Layer_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Expanding_Layer_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Expanding_Layer_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="Expanding_Layer.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="Expanding_Layer_soc.pdi"/>
+  <File Type="PL-PDI-FILE" Name="Expanding_Layer_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="Expanding_Layer.rcfi"/>
+  <File Type="CFI_FILE" Name="Expanding_Layer.cfi"/>
+  <File Type="RNPI_FILE" Name="Expanding_Layer.rnpi"/>
+  <File Type="NPI_FILE" Name="Expanding_Layer.npi"/>
+  <File Type="RBD_FILE" Name="Expanding_Layer.rbd"/>
+  <File Type="ROUTE-RQS" Name="Expanding_Layer_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Expanding_Layer_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/expand_dsp_macro_1/expand_dsp_macro_1.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/ip/expand_dsp_macro_1/expand_dsp_macro_1.xci"/>
+        <Attr Name="ImportTime" Val="1757479501"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/expand_Adder_Tree.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/imports/expand_Adder_Tree.v"/>
+        <Attr Name="ImportTime" Val="1757041160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/expand_Convolution.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/imports/expand_Convolution.v"/>
+        <Attr Name="ImportTime" Val="1757330871"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/expand_Multiplier_DSP.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/imports/expand_Multiplier_DSP.v"/>
+        <Attr Name="ImportTime" Val="1757156222"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/expand_pipelined_multiplier_2stage.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/imports/expand_pipelined_multiplier_2stage.v"/>
+        <Attr Name="ImportTime" Val="1757041100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Expanding_Layer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/imports/Expanding_Layer.v"/>
+        <Attr Name="ImportTime" Val="1757334353"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/component.xml">
+      <FileInfo SFType="IPXACT">
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Expanding_Layer_19.1/Expanding_Layer_19.1.srcs/sources_1/component.xml"/>
+        <Attr Name="ImportTime" Val="1757335370"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Expanding_Layer"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/bin/zcu102.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../bin/zcu102.xdc"/>
+        <Attr Name="ImportTime" Val="1757148573"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="expand_fifo_generator_1"/>
+</GenRun>

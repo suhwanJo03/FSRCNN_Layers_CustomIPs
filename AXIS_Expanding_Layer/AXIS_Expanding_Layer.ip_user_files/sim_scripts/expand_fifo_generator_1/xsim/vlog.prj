@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../Expanding_Layer_19.1.gen/sources_1/ip/expand_fifo_generator_1/sim/expand_fifo_generator_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

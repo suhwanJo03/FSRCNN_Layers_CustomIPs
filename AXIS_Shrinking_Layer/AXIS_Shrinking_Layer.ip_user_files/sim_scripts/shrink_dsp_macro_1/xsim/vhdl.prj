@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../Shrinking_Layer_19.1.gen/sources_1/ip/shrink_dsp_macro_1/sim/shrink_dsp_macro_1.vhd" \
+
+# Do not sort compile order
+nosort

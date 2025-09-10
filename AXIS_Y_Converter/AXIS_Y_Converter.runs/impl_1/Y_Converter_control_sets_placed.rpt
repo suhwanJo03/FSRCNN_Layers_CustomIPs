@@ -1,0 +1,95 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Wed Sep 10 12:39:42 2025
+| Host         : DESKTOP-INFKKCG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Y_Converter_control_sets_placed.rpt
+| Design       : Y_Converter
+| Device       : xczu9eg
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     9 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    17 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     8 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            1 |
+| No           | No                    | Yes                    |              24 |            6 |
+| No           | Yes                   | No                     |               5 |            5 |
+| Yes          | No                    | No                     |              16 |            3 |
+| Yes          | No                    | Yes                    |              16 |            4 |
+| Yes          | Yes                   | No                     |             142 |           23 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                                                Enable Signal                                               |                                                            Set/Reset Signal                                                            | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  axi_clk_IBUF_BUFG |                                                                                                            | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/arststages_ff[1] |                1 |              3 |         3.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                            | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.rst_d2                                              |                2 |              3 |         1.50 |
+|  axi_clk_IBUF_BUFG |                                                                                                            |                                                                                                                                        |                1 |              4 |         4.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                            | axi_reset_n_IBUF_inst/O                                                                                                                |                6 |              7 |         1.17 |
+|  axi_clk_IBUF_BUFG | ADDER_VALID_0                                                                                              | axi_reset_n_IBUF_inst/O                                                                                                                |                1 |              8 |         8.00 |
+|  axi_clk_IBUF_BUFG | ADDER_VALID_1                                                                                              | axi_reset_n_IBUF_inst/O                                                                                                                |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG | heightCounter[7]_i_1_n_0                                                                                   | axi_reset_n_IBUF_inst/O                                                                                                                |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/E[0] |                                                                                                                                        |                1 |              8 |         8.00 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/E[0] | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/AR[0]                                                                |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]         | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/AR[0]                                                                |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/E[0]                                     |                                                                                                                                        |                2 |              8 |         4.00 |
+|  axi_clk_IBUF_BUFG | widthCounter0                                                                                              | axi_reset_n_IBUF_inst/O                                                                                                                |                2 |              9 |         4.50 |
+|  axi_clk_IBUF_BUFG | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]         |                                                                                                                                        |                1 |             12 |        12.00 |
+|  axi_clk_IBUF_BUFG |                                                                                                            | out_buffer/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/AR[0]                                                                |                3 |             16 |         5.33 |
+|  axi_clk_IBUF_BUFG | R_MUL/valid_2_reg_0[0]                                                                                     | axi_reset_n_IBUF_inst/O                                                                                                                |                7 |             31 |         4.43 |
+|  axi_clk_IBUF_BUFG | B_MUL/E[0]                                                                                                 | axi_reset_n_IBUF_inst/O                                                                                                                |                5 |             34 |         6.80 |
+|  axi_clk_IBUF_BUFG | R_MUL/E[0]                                                                                                 | axi_reset_n_IBUF_inst/O                                                                                                                |               10 |             44 |         4.40 |
++--------------------+------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
