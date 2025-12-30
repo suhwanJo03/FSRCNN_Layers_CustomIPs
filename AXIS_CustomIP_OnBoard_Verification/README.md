@@ -101,17 +101,9 @@ This guide covers **block design setup (with HP port configuration and clocking)
    - Master (m_axis) → S2MM  
    - Insert converters if data width mismatch occurs  
 
-4. **Clock/Reset**  
-   - **PS Reference Clock**:  
-     - Set `PSS_REF_CLK = 33.330 MHz` (valid range 27–60 MHz)  
-     - *Path*: PS → Clock Configuration → Input Reference Frequency  
-   - Ensure reset polarity consistency across the stream domain  
-
-   ![PSS_REF_CLK = 33.330 MHz](docs/pss_ref_clk.png)
-
 ---
 
-## 5. IP Packaging — Clock Metadata Warning
+## 4. IP Packaging — Clock Metadata Warning
 
 > ⚠️ **Critical Warning Prevention**  
 > - When packaging a custom IP, in *Ports and Interfaces* → Clock interface metadata:  
@@ -121,25 +113,25 @@ This guide covers **block design setup (with HP port configuration and clocking)
 
 ---
 
-## 6. Vitis Project Setup
+## 5. Vitis Project Setup
 - **BSP**: Standalone
 - **Sources**: `main.c`, `frame1.h`, `frame2.h`, `platform.c/h`  
 - **Linker script**: ensure `rx_buffer` and frame data are placed in DDR  
 - **Platform note**: UltraScale+ requires FSBL and PMUFW to be generated with the platform  
 
-### 6.1 Cache & Transfer Rules
+### 5.1 Cache & Transfer Rules
 - **MM2S source**: Flush cache before DMA transfer (`Xil_DCacheFlushRange`)  
 - **S2MM destination**: Invalidate cache after DMA completes (`Xil_DCacheInvalidateRange`)  
 - **Order**: Always start **S2MM first**, then **MM2S**  
 
-### 6.2 Build & Run
+### 5.2 Build & Run
 1. Build application (Release recommended)  
 2. Program device with bitstream (via JTAG)  
 3. Monitor UART console (115200 8N1)  
 
 ---
 
-## 7. Expected UART Log (Example)
+## 6. Expected UART Log (Example)
 ```
 DMA initialization success..
 Starting in:
@@ -164,7 +156,7 @@ MM2S Busy? 0 S2MM Busy? 0
 
 ---
 
-## 8. Debugging Checklist
+## 7. Debugging Checklist
 - **Busy stuck at 1**: Check tvalid/tready handshake, clock/reset domains  
 - **Corrupted/zero data**: Verify cache flush/invalidate ranges, alignment  
 - **Width mismatch**: Insert AXIS DWC if necessary  
